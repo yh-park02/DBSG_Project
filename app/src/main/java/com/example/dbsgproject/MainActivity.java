@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
 
-        //재건 브랜치 작업 1
+
     }
 
 }

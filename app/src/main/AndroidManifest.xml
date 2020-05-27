@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PeristalsisLoginActivity"></activity>
         <!-- SplashActivity : 앱 로딩시 초기화면 -->
         <activity
             android:name=".SplashActivity"
