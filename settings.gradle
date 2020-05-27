@@ -1,0 +1,2 @@
+rootProject.name='DBSG Project'
+include ':app'
