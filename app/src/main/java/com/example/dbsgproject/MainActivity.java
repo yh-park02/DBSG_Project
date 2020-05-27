@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
     public void goLogin(View view){
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
+
+        //재건 브랜치 작업 1
     }
 
 }
