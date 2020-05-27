@@ -16,6 +16,9 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    //영희ㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle; //DrawerLayout을 제어할 수 있는 toggle
     boolean isDrawerOpend; //현재 열려있는지 안열려있는지 판단
