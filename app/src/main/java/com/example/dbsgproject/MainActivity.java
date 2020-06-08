@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
     public void goLogin(View view){
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
+
+
     }
 /*
     //검색 화면으로 이동

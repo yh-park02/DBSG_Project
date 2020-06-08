@@ -14,7 +14,10 @@ public class SplashActivity extends Activity {
         }catch (InterruptedException e) {
             e.printStackTrace();
         }
-        startActivity(new Intent(this,MainActivity.class));
+        //기본
+        //startActivity(new Intent(this,MainActivity.class));
+        //테스트용
+        startActivity(new Intent(this, CookingActivity.class));
         finish();
     }
 }
