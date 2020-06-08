@@ -35,7 +35,8 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    //영희
+    //영희 >> 맹희
+    //0609 >> 등산맹희
 
 
 }
