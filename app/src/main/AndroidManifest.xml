@@ -13,7 +13,9 @@
         <activity android:name=".Main_recipe_Activity" />
         <activity android:name=".UserReview" />
         <activity android:name=".PeristalsisLoginActivity" />
-        <activity android:name=".NicknameOverlapTestActivity" /> <!-- SplashActivity : 앱 로딩시 초기화면 -->
+        <activity android:name=".NicknameOverlapTestActivity" />
+        <activity android:name=".Total_RecipeActivity"></activity>
+        <activity android:name=".SearchActivity" /> <!-- SplashActivity : 앱 로딩시 초기화면 -->
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="fullSensor"
@@ -23,9 +25,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+
     </application>
 
 </manifest>

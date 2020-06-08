@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6E6E6">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종류별 추천태그"
+                android:textSize="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_tag"
+                android:drawableLeft="@drawable/crown"
+                android:text="밑반찬"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:text="Button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:text="Button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:text="Button"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_tag"
+                android:drawableLeft="@drawable/crown"
+                android:text="Button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:drawableLeft="@drawable/crown"
+                android:text="Button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:drawableLeft="@drawable/crown"
+                android:text="Button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_tag"
+                android:drawableLeft="@drawable/crown"
+                android:text="Button"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상황별 추천태그"
+                android:textSize="10sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+
+</LinearLayout>

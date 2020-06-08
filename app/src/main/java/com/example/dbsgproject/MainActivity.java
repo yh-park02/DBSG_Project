@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +18,15 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle; //DrawerLayout을 제어할 수 있는 toggle
     boolean isDrawerOpend; //현재 열려있는지 안열려있는지 판단
+
+    private FragmentManager fragmentManager;
+    private Fragment_RecipeImg fragment_recipeImg;
+    private Fragment_RecipeList fragment_recipeList;
+    private FragmentTransaction transaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,45 +47,69 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id=item.getItemId();
                 if(id==R.id.menu_drawer_bookmark){
-                    showToast("즐겨찾기");
+                    Toast.makeText(getApplicationContext(), "즐겨찾기", Toast.LENGTH_SHORT).show();
                 }else if(id==R.id.menu_drawer_profile){
-                    showToast("프로필설정");
+                    Toast.makeText(getApplicationContext(), "프로필관리", Toast.LENGTH_SHORT).show();
                 }else if(id==R.id.menu_drawer_setting){
-                    showToast("설정");
+                    Toast.makeText(getApplicationContext(), "설정", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
         });
+
+        //프래그먼트
+        fragmentManager = getSupportFragmentManager();
+
+        fragment_recipeImg = new Fragment_RecipeImg();
+        fragment_recipeList = new Fragment_RecipeList();
+
+        transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.FragmentArea1, fragment_recipeImg);
+        transaction.replace(R.id.FragmentArea2, fragment_recipeList);
+
+        transaction.commit();
+
+
     }//onCreate
 
-    //search 메뉴
-    @Override
+
+    //search 옵션메뉴
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.main_optionmenu, menu);
+        menuInflater.inflate(R.menu.menu_search, menu);
+
+        //getMenuInflater().inflate(R.menu.main_optionmenu, menu);
         return true;
     }
-
-    //이벤트 처리
+    //옵션메뉴들 이벤트
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(toggle.onOptionsItemSelected(item)){
+        int id = item.getItemId();
+        if (toggle.onOptionsItemSelected(item)) {
             return false;
+
+        } else if (id == R.id.action_search) {
+            Intent searchIntent = new Intent(this, SearchActivity.class);
+            startActivity(searchIntent);
+            //Toast.makeText(getApplicationContext(), "버튼을 눌렀다.", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void showToast(String message){
-        Toast toast=Toast.makeText(this, message, Toast.LENGTH_SHORT);
-        toast.show();
-    }
 
-    //로그인 화면으로
+    //로그인 화면으로 이동
     public void goLogin(View view){
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
 
 
     }
-
+/*
+    //검색 화면으로 이동
+    public void goSearch(View view){
+        Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+        startActivity(intent);
+    }
+*/
 }
