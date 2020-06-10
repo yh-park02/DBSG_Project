@@ -102,9 +102,14 @@ public class MainActivity extends AppCompatActivity {
     public void goLogin(View view){
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
-
-
     }
+        //추천메뉴클릭으로 전체 레시피화면으로 이동
+        public void SelectRecipe(View view){
+            Intent newintent2 = new Intent(getApplicationContext(), Total_RecipeActivity.class);
+            startActivity(newintent2);
+        }
+
+
 /*
     //검색 화면으로 이동
     public void goSearch(View view){
