@@ -17,7 +17,7 @@ public class SplashActivity extends Activity {
         //기본
         //startActivity(new Intent(this,MainActivity.class));
         //테스트용
-        startActivity(new Intent(this, CookingActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 }

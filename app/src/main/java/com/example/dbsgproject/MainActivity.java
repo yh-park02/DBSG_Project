@@ -1,6 +1,7 @@
 package com.example.dbsgproject;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -33,7 +35,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        /*액션바
+          getSupportActionBar().setDisplayShowTitleEnabled(false);
+         */
+
+        /*액션바 설정 - 아이콘표시
+        ActionBar ab = getSupportActionBar();
+                ab.setIcon(R.drawable.crown);
+                ab.setDisplayUseLogoEnabled(true);
+                ab.setDisplayShowHomeEnabled(true);
+          */
+        //Custom ActionBar
+        ActionBar ab = getSupportActionBar();
+            ab.setDisplayShowTitleEnabled(false); //기본타이틀 사용 안함
+            ab.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); //커스텀 사용
+            ab.setCustomView(R.layout.custom_title); //커스텀에 사용할 파일 위치
+
+
+
 
         drawer = findViewById(R.id.main_drawer);
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.drawer_open, R.string.drawer_close);
@@ -80,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         menuInflater.inflate(R.menu.menu_search, menu);
 
         //getMenuInflater().inflate(R.menu.main_optionmenu, menu);
+
         return true;
     }
     //옵션메뉴들 이벤트
@@ -103,8 +123,11 @@ public class MainActivity extends AppCompatActivity {
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
 
-
     }
+
+
+
+
 /*
     //검색 화면으로 이동
     public void goSearch(View view){

@@ -8,19 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Total_RecipeActivity"></activity>
-        <activity android:name=".SearchActivity" /> <!-- SplashActivity : 앱 로딩시 초기화면 -->
-        <activity android:name=".CookingActivity"></activity>
-        <activity android:name=".Main_recipe_Activity" />
-        <activity android:name=".UserReview" />
-        <activity android:name=".PeristalsisLoginActivity" />
-        <activity android:name=".NicknameOverlapTestActivity" /> <!-- SplashActivity : 앱 로딩시 초기화면 -->
-        <activity android:name=".Main_recipe_Activity" />
-        <activity android:name=".UserReview" />
-        <activity android:name=".PeristalsisLoginActivity" />
+        android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".NicknameOverlapTestActivity" /> <!-- SplashActivity : 앱 로딩시 초기화면 -->
+        <!-- SplashActivity : 앱 로딩시 초기화면 -->
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="fullSensor"
@@ -29,12 +19,17 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Total_RecipeActivity"/>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".CookingActivity"/>
+        <activity android:name=".Main_recipe_Activity" />
+        <activity android:name=".UserReview" />
+        <activity android:name=".PeristalsisLoginActivity" />
+        <activity android:name=".NicknameOverlapTestActivity" />
     </application>
 
 </manifest>

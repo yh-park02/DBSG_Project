@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="250dp"
-    android:background="#4CAF50">
+    android:background="#F0B283">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -17,11 +17,11 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@android:drawable/sym_def_app_icon" />
+            android:layout_marginTop="95dp"
+            app:srcCompat="@drawable/user_blue" />
 
         <Button
             android:id="@+id/button"
@@ -31,6 +31,7 @@
             android:layout_margin="6dp"
             android:background="@drawable/btn_login"
             android:onClick="goLogin"
-            android:text="LOGIN" />
+            android:text="LOGIN"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
