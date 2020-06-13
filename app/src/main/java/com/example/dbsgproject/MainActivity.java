@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private Fragment_RecipeList fragment_recipeList;
     private FragmentTransaction transaction;
 
+    public long backBtnTime = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 ab.setDisplayUseLogoEnabled(true);
                 ab.setDisplayShowHomeEnabled(true);
           */
+
         //Custom ActionBar
         ActionBar ab = getSupportActionBar();
             ab.setDisplayShowTitleEnabled(false); //기본타이틀 사용 안함
             ab.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); //커스텀 사용
             ab.setCustomView(R.layout.custom_title); //커스텀에 사용할 파일 위치
-
+            //ab.setElevation(0); //액션바 그림자 제거
 
 
 
@@ -123,6 +127,20 @@ public class MainActivity extends AppCompatActivity {
         Intent newintent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(newintent);
 
+    }
+
+    //뒤로가기 두번 눌러 앱종료하기
+    @Override
+    public void onBackPressed(){
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime){
+            super.onBackPressed();
+        }else{
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르시면 앱이 종료됩니다." ,Toast.LENGTH_SHORT).show();
+        }
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.dbsgproject;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -26,6 +27,9 @@ public class SearchActivity extends AppCompatActivity {
         fragment_search_recipeList = new Fragment_Search_RecipeList();
         changeFragment(0);
 
+        //액션바 안보이게
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 /*
         fragmentManager = getSupportFragmentManager();

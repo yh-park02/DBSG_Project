@@ -7,7 +7,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E6E6E6">
+        android:background="#f8efde">
 
         <TableRow
             android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="종류별 추천태그"
+                android:text="조리도구별 추천태그"
                 android:textSize="10sp" />
         </TableRow>
 
@@ -29,43 +29,52 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/crown"
                 android:background="@drawable/btn_tag"
-                android:drawableLeft="@drawable/crown"
-                android:text="밑반찬"
+                android:text="오븐없는 3끼"
                 android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/crown"
                 android:background="@drawable/btn_tag"
-                android:text="Button"
+                android:text="에어프라이어\n 없는 3끼"
                 android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/crown"
                 android:background="@drawable/btn_tag"
-                android:text="Button"
+                android:text="불 없는 3끼"
                 android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/crown"
                 android:background="@drawable/btn_tag"
-                android:text="Button"
+                android:text="전자렌지만\n 있는 3끼"
                 android:textSize="12sp" />
+
 
         </TableRow>
 

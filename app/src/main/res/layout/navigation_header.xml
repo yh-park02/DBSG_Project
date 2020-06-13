@@ -17,12 +17,14 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="center"
             android:layout_marginTop="95dp"
             app:srcCompat="@drawable/user_blue" />
 
+        <!-- android:minWidth, android:minHeight
+             : 버튼과 글자 사이의 패딩 줄이기 -->
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
@@ -32,6 +34,9 @@
             android:background="@drawable/btn_login"
             android:onClick="goLogin"
             android:text="LOGIN"
-            android:textStyle="bold" />
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:minWidth="80dp"
+            android:minHeight="40dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
