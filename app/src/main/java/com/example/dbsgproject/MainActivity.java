@@ -84,12 +84,10 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
         fragment_recipeImg = new Fragment_RecipeImg();
-        fragment_recipeList = new Fragment_RecipeList();
 
         transaction = fragmentManager.beginTransaction();
 
         transaction.replace(R.id.FragmentArea1, fragment_recipeImg);
-        transaction.replace(R.id.FragmentArea2, fragment_recipeList);
 
         transaction.commit();
 
