@@ -7,7 +7,7 @@ public class F_RecipeList_ListViewItem {
     private Drawable food_img ;
     private String food_title ;
     private String food_material ;
-
+    private String menu_totalTime;
     public Drawable getFood_img() {
         return food_img;
     }
@@ -22,6 +22,13 @@ public class F_RecipeList_ListViewItem {
 
     public void setFood_title(String food_title) {
         this.food_title = food_title;
+    }
+    public String getmenu_totalTime() {
+        return menu_totalTime;
+    }
+
+    public void setmenu_totalTime(String menu_totalTime) {
+        this.menu_totalTime = menu_totalTime;
     }
 
     public String getFood_material() {

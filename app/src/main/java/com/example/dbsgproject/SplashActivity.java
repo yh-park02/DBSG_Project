@@ -10,14 +10,14 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1500);
         }catch (InterruptedException e) {
             e.printStackTrace();
         }
         //기본
-        //startActivity(new Intent(this,MainActivity.class));
+        startActivity(new Intent(this,MainActivity.class));
         //테스트용
-        startActivity(new Intent(this, MainActivity.class));
+        //startActivity(new Intent(this, Main_recipe_Activity.class));
         finish();
     }
 }

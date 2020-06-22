@@ -143,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
 /*
     //검색 화면으로 이동
     public void goSearch(View view){
@@ -151,4 +150,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 */
+
+
+
+
 }
