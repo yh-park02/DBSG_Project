@@ -20,7 +20,7 @@ public class Fragment_Search_RecipeCategory extends Fragment {
 
         View rootview = inflater.inflate(R.layout.fragment_seaech_recipe_category, containar, false);
 
-        Button btn = (Button) rootview.findViewById(R.id.btn1);
+        Button btn = (Button) rootview.findViewById(R.id.btn7);
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override

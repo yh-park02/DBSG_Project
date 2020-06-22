@@ -1,150 +1,764 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <TableLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f8efde">
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <TableRow
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_gravity="center"
+            android:background="#f8efde">
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="조리도구별 추천태그"
-                android:textSize="10sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btn1"
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/crown"
-                android:background="@drawable/btn_tag"
-                android:text="오븐없는 3끼"
-                android:textSize="12sp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
 
-            <Button
-                android:id="@+id/btn2"
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="종류별 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="6dp"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/crown"
-                android:background="@drawable/btn_tag"
-                android:text="에어프라이어\n 없는 3끼"
-                android:textSize="12sp" />
+                android:layout_gravity="center"
+                android:gravity="center">
 
-            <Button
-                android:id="@+id/btn3"
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="밥 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="떠 먹을 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="뽁아먹는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="밥이랑 먹는 3끼"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="6dp"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/crown"
-                android:background="@drawable/btn_tag"
-                android:text="불 없는 3끼"
-                android:textSize="12sp" />
+                android:layout_gravity="center"
+                android:gravity="center">
 
-            <Button
-                android:id="@+id/btn4"
+                <Button
+                    android:id="@+id/btn10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="날로 먹는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="익혀 먹는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="무'쳐'먹는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="찍어먹는 3끼"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="달다구리 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="마시는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="Button"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="Button"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="6dp"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/crown"
-                android:background="@drawable/btn_tag"
-                android:text="전자렌지만\n 있는 3끼"
-                android:textSize="12sp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
 
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상황별 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
 
-        </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp">
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="술친구 3끼"
+                    android:textSize="10sp" />
 
-            <Button
-                android:id="@+id/btn5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_tag"
-                android:drawableLeft="@drawable/crown"
-                android:text="Button"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="어서오 3끼"
+                    android:textSize="10sp" />
 
-            <Button
-                android:id="@+id/btn6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
-                android:background="@drawable/btn_tag"
-                android:drawableLeft="@drawable/crown"
-                android:text="Button"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="손수 싸온 3끼"
+                    android:textSize="10sp" />
 
-            <Button
-                android:id="@+id/btn7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
-                android:background="@drawable/btn_tag"
-                android:drawableLeft="@drawable/crown"
-                android:text="Button"
-                android:textSize="12sp" />
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="속 풀릴 3끼"
+                    android:textSize="10sp" />
+            </TableRow>
 
-            <Button
-                android:id="@+id/btn8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="6dp"
-                android:background="@drawable/btn_tag"
-                android:drawableLeft="@drawable/crown"
-                android:text="Button"
-                android:textSize="12sp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
 
-        </TableRow>
+                <Button
+                    android:id="@+id/button20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="자취 3끼"
+                    android:textSize="10sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp">
+                <Button
+                    android:id="@+id/button21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="명절 3끼"
+                    android:textSize="10sp" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="상황별 추천태그"
-                android:textSize="10sp" />
-        </TableRow>
+                <Button
+                    android:id="@+id/button22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="내 3끼\n(데이트/이벤트)"
+                    android:textSize="10sp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
+                <Button
+                    android:id="@+id/button23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="빨리 먹는 3끼"
+                    android:textSize="10sp" />
 
+            </TableRow>
 
-</LinearLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="주워 먹는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/button25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="분식 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/button26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="모르는 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/button27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="달다구리 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="조리도구별 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/oven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/icon_oven"
+                    android:text="@string/oven"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/airfryer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/icon_airfryer"
+                    android:text="@string/air"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/microwave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/icon_microwave"
+                    android:text="@string/microwave"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/fire"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/icon_fire"
+                    android:text="@string/fire"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제철요리 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="봄같은 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn19"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="여름적인 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="가을스런 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="겨울 나는 3끼"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나라별 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="우리나라 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="중국 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="일본 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="양식 3끼"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn26"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn27"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="중국 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn28"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="일본 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn29"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="양식 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="뷰티/건강 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn30"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="살이 빠질 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn31"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="피부가 좋아질 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn32"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="독소가 빠질 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="근소실을 막아줄 3끼"
+                    android:textSize="10sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn34"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="자양강장제 같은 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn35"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn36"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn37"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="엄마/아기 추천태그"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn42"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="우리 아기를 위한 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn38"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="엄마를 위한 3끼"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn39"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn40"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_tag"
+                    android:drawableTop="@drawable/crown"
+                    android:text="아시아 3끼"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

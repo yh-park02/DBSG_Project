@@ -2,4 +2,10 @@
     <string name="app_name">DBSG Project</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="oven">오븐없는\ 3끼</string>
+    <string name="air">에어프라이어\n 없는\ 3끼</string>
+    <string name="fire">불\ 없는\ 3끼</string>
+    <string name="microwave">전자렌지만\n 있는\ 3끼</string>
+
 </resources>
