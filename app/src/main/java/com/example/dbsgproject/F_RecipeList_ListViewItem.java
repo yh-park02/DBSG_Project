@@ -7,6 +7,7 @@ public class F_RecipeList_ListViewItem {
     private Drawable food_img ;
     private String food_title ;
     private String food_material ;
+    private String menu_totalTime;
 
     public Drawable getFood_img() {
         return food_img;
