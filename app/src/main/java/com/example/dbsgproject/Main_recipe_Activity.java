@@ -13,11 +13,16 @@ public class Main_recipe_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_recipe_);
+        //setContentView(R.layout.activity_main_recipe_);
+        setContentView(R.layout.activity_total__recipe);
 
-        TV_food_title = findViewById(R.id.textView);
-        TV_food_material = findViewById(R.id.textView5);
-        TV_totalTime= findViewById(R.id.textView4);
+//        TV_food_title = findViewById(R.id.textView);
+//        TV_food_material = findViewById(R.id.textView5);
+//        TV_totalTime= findViewById(R.id.textView4);
+
+        TV_food_title = findViewById(R.id.textView6);
+        TV_food_material = findViewById(R.id.textView9);
+        TV_totalTime= findViewById(R.id.textView7);
 
 
         Intent getintent = getIntent();
