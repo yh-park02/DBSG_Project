@@ -1,4 +1,4 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.Retrofit;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

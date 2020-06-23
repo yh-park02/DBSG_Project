@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class Main_recipe_Activity extends AppCompatActivity {
 
     TextView TV_food_title,TV_totalTime,TV_food_material;
-    String food_title,food_material,menu_totalTime;
+    //String food_title,food_material,menu_totalTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
