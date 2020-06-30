@@ -1,4 +1,4 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.main;
 
 import android.graphics.drawable.Drawable;
 

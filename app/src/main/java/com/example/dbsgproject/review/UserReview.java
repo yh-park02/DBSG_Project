@@ -1,10 +1,12 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.review;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.dbsgproject.R;
 
 public class UserReview extends AppCompatActivity {
 

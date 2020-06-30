@@ -1,4 +1,4 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.review;
 
 public class User_review_details {
 

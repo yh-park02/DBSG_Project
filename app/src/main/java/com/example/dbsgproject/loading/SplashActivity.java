@@ -1,8 +1,10 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.loading;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.dbsgproject.main.MainActivity;
 
 public class SplashActivity extends Activity {
     @Override

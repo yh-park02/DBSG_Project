@@ -1,4 +1,4 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.main;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -6,16 +6,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
+import com.example.dbsgproject.R;
+import com.example.dbsgproject.retrofit.RetrofitClient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

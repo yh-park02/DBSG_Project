@@ -19,7 +19,7 @@
 
         <!-- SplashActivity : 앱 로딩시 초기화면 -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".loading.SplashActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/splashTheme">
             <intent-filter>
@@ -28,15 +28,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".Total_RecipeActivity"/>
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".CookingActivity"/>
-        <activity android:name=".Main_recipe_Activity" />
-        <activity android:name=".UserReview" />
-        <activity android:name=".PeristalsisLoginActivity" />
-        <activity android:name=".NicknameOverlapTestActivity" />
+        <activity android:name=".main_hamburger.LoginActivity"/>
+        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".search.SearchActivity" />
+        <activity android:name=".recipe.CookingActivity"/>
+        <activity android:name=".recipe.Main_recipe_Activity" />
+        <activity android:name=".review.UserReview" />
+        <activity android:name=".main_hamburger.PeristalsisLoginActivity" />
+        <activity android:name=".main_hamburger.NicknameOverlapTestActivity" />
     </application>
 
 </manifest>

@@ -1,8 +1,10 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.recipe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dbsgproject.R;
 
 public class Main_recipe_Activity extends AppCompatActivity {
 

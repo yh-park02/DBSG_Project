@@ -1,4 +1,4 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -7,17 +7,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.dbsgproject.main_hamburger.LoginActivity;
+import com.example.dbsgproject.R;
+import com.example.dbsgproject.search.SearchActivity;
 import com.google.android.material.navigation.NavigationView;
+
+import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,17 +31,28 @@ public class MainActivity extends AppCompatActivity {
     boolean isDrawerOpend; //현재 열려있는지 안열려있는지 판단
 
     private FragmentManager fragmentManager;
-    private Fragment_RecipeImg fragment_recipeImg;
     private Fragment_RecipeList fragment_recipeList;
     private FragmentTransaction transaction;
 
     public long backBtnTime = 0;
+
+    RecipeImgAdapter adapter;
+    ViewPager viewPager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Image ViewPager
+        viewPager = (ViewPager) findViewById(R.id.view);
+        adapter = new RecipeImgAdapter(this);
+        viewPager.setAdapter(adapter);
+
+        //Image ViewPager Indicator
+        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager);
 
         /*액션바
           getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -48,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 ab.setDisplayUseLogoEnabled(true);
                 ab.setDisplayShowHomeEnabled(true);
           */
+
 
         //Custom ActionBar
         ActionBar ab = getSupportActionBar();
@@ -80,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+ /*
         //프래그먼트
         fragmentManager = getSupportFragmentManager();
 
@@ -90,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.FragmentArea1, fragment_recipeImg);
 
         transaction.commit();
-
+*/
 
     }//onCreate
 

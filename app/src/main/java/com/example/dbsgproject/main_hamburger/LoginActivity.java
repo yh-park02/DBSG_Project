@@ -1,9 +1,11 @@
-package com.example.dbsgproject;
+package com.example.dbsgproject.main_hamburger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.dbsgproject.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 //            e.printStackTrace();
 //        }
         //기본
-        startActivity(new Intent(this,PeristalsisLoginActivity.class));
+        startActivity(new Intent(this, PeristalsisLoginActivity.class));
 
         finish();
     }
