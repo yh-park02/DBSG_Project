@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.dbsgproject.recipe.CookingActivity;
 import com.example.dbsgproject.R;
+import com.example.dbsgproject.recipe.Recipe_Detail_Activity;
 
 public class Fragment_Search_RecipeList extends Fragment {
     @Nullable
@@ -35,7 +36,7 @@ public class Fragment_Search_RecipeList extends Fragment {
         btnCooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newintent = new Intent(getActivity(), CookingActivity.class);
+                Intent newintent = new Intent(getActivity(), Recipe_Detail_Activity.class);
                 startActivity(newintent);
             }
         });

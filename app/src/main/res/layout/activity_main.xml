@@ -22,7 +22,7 @@
             app:ci_width="7dp"
             app:ci_margin="4dp"
             android:layout_width="match_parent"
-            android:layout_height="48dp"/>
+            android:layout_height="25dp"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view"
@@ -31,12 +31,13 @@
             android:layout_weight="2" />
 
         <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/customlistfragment"
             android:name="com.example.dbsgproject.main.Fragment_RecipeList"
-            tools:layout="@layout/activity_main"
-            android:layout_weight="1" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            tools:layout="@layout/activity_main" />
 
     </LinearLayout>
 

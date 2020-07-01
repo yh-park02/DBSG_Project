@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.ListFragment;
 
 import com.example.dbsgproject.R;
+import com.example.dbsgproject.recipe.Main_recipe_Activity;
 import com.example.dbsgproject.retrofit.RetrofitClient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -112,14 +113,12 @@ public class Fragment_RecipeList extends ListFragment {
 
         Toast.makeText(getActivity(), food_title+" : "+food_material+" : "+menu_totalTime, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getActivity(),Main_recipe_Activity.class);
+        Intent intent = new Intent(getActivity(), Main_recipe_Activity.class);
         intent.putExtra("food_title_String",food_title);
         intent.putExtra("food_material_String",food_material);
         //intent.putExtra("food_title_String",food_title);
         intent.putExtra("menu_totalTime_String",menu_totalTime);
         System.out.println(menu_totalTime);
-
-
 
         startActivity(intent);
 
