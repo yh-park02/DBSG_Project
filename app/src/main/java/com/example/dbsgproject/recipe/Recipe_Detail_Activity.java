@@ -25,7 +25,7 @@ public class Recipe_Detail_Activity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         
 
-        // CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
-       // indicator.setViewPager(viewPager);
+         CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager);
     }
 }

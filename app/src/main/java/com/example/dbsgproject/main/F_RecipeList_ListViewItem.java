@@ -39,4 +39,5 @@ public class F_RecipeList_ListViewItem {
     public void setFood_material(String food_material) {
         this.food_material = food_material;
     }
+
 }
