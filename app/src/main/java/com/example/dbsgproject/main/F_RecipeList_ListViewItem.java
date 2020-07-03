@@ -28,6 +28,7 @@ public class F_RecipeList_ListViewItem {
     public String getmenu_totalTime() {
         return menu_totalTime;
     }
+
     public void setmenu_totalTime(String menu_totalTime) {
         this.menu_totalTime = menu_totalTime;
     }

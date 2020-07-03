@@ -49,7 +49,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="밥 3끼"
                     android:textSize="10sp" />
 

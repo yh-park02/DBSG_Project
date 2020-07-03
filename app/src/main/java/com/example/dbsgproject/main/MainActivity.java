@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.dbsgproject.main_hamburger.LoginActivity;
 import com.example.dbsgproject.R;
+import com.example.dbsgproject.search.Fragment_Search_RecipeList;
 import com.example.dbsgproject.search.SearchActivity;
 import com.google.android.material.navigation.NavigationView;
 

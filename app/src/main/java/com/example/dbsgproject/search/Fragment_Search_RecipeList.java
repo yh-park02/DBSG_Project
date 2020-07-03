@@ -34,7 +34,7 @@ import retrofit2.Response;
 
 public class Fragment_Search_RecipeList extends ListFragment {
 
-    F_Fragment_Search_RecipeListAdapter adapter;
+   F_RecipeList_ListViewAdapter adapter;
 
     @Nullable
     @Override
@@ -43,14 +43,16 @@ public class Fragment_Search_RecipeList extends ListFragment {
 
         View rootview = inflater.inflate(R.layout.fragment_search_recipe_list, containar, false);
 
+/*
         Button btn = (Button) rootview.findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SearchActivity searchActivity = (SearchActivity)getActivity();
+                SearchActivity searchActivity = (SearchActivity) getActivity();
                 searchActivity.changeFragment(0);
             }
         });
+
 
         Button btnCooking = (Button) rootview.findViewById(R.id.btnCooking);
         btnCooking.setOnClickListener(new View.OnClickListener() {
@@ -60,11 +62,23 @@ public class Fragment_Search_RecipeList extends ListFragment {
                 startActivity(newintent);
             }
         });
-//
-//        // Adapter 생성 및 Adapter 지정.
-//        adapter = new F_Fragment_Search_RecipeListAdapter() ;
-//        setListAdapter(adapter) ;
-//
+
+*/
+
+        // Adapter 생성 및 Adapter 지정.
+        adapter = new F_RecipeList_ListViewAdapter() ;
+        setListAdapter(adapter) ;
+
+        // 첫 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.crown),
+                "잔치국수", "국수, 멸치, 애호박, 계란", "상") ;
+        // 두 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.crown),
+                "김밥", "오늘은 무슨 김밥 먹을까?", "상") ;
+        // 세 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.crown),
+                "왕관", "오늘은 뭐하지", "상") ;
+
 //        RetrofitClient retrofitClient = new RetrofitClient();
 //        Call<JsonObject> call = retrofitClient.apiService.getList();
 //        call.enqueue(new Callback<JsonObject>() {
@@ -115,14 +129,16 @@ public class Fragment_Search_RecipeList extends ListFragment {
 //            }
 //        });
 
-//        for(int i=0; i<30; i++) {
-//            // 첫 번째 아이템 추가.
-//            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg2),
-//                    "석쇠닭발", "닭발, 고춧가루, 청양고추, 설탕");
-//            // 두 번째 아이템 추가.
-//            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg3),
-//                    "새우구이", "새우, 굵은소금, 쿠킹호일");
-//        }
+/*
+        for(int i=0; i<30; i++) {
+            // 첫 번째 아이템 추가.
+            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg2),
+                    "석쇠닭발", "닭발, 고춧가루, 청양고추, 설탕");
+            // 두 번째 아이템 추가.
+            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg3),
+                    "새우구이", "새우, 굵은소금, 쿠킹호일");
+        }
+*/
 
 
 
@@ -130,6 +146,20 @@ public class Fragment_Search_RecipeList extends ListFragment {
     }
 
 
+    //ListView 아이템 클릭이벤트를 처리
+    @Override
+    public void onListItemClick (ListView l, View v, int position, long id) {
+        // get TextView's Text.
+        F_RecipeList_ListViewItem item = (F_RecipeList_ListViewItem) l.getItemAtPosition(position) ;
+
+        String food_title = item.getFood_title() ;
+        String food_material = item.getFood_material() ;
+        String menu_totalTime =  item.getmenu_totalTime();
+        Drawable food_img = item.getFood_img() ;
+
+    }
+
+    //ListFragment 외부(Activity)에서 아이템 추가를 위한 함수
     public void addItem(Drawable icon, String title, String desc, String menu_totalTime) {
         adapter.addItem(icon, title, desc,menu_totalTime) ;
     }

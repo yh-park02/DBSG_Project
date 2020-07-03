@@ -1,5 +1,6 @@
 package com.example.dbsgproject.search;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +12,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.dbsgproject.R;
+import com.example.dbsgproject.main_hamburger.LoginActivity;
 import com.example.dbsgproject.search.SearchActivity;
 
-public class Fragment_Search_RecipeCategory extends Fragment implements View.OnClickListener {
+public class Fragment_Search_RecipeCategory extends Fragment  {
+    //implements View.OnClickListener
 
     @Nullable
     @Override
@@ -27,6 +30,15 @@ public class Fragment_Search_RecipeCategory extends Fragment implements View.OnC
 
 
         Button oevn = (Button) rootview.findViewById(R.id.btn1);
+        oevn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                SearchActivity searchActivity = (SearchActivity)getActivity();
+                searchActivity.changeFragment(1);
+            }
+        });
+
+/*
         Button airfryer = (Button) rootview.findViewById(R.id.btn2);
         Button fire = (Button) rootview.findViewById(R.id.btn3);
         Button microwave = (Button) rootview.findViewById(R.id.btn4);
@@ -114,14 +126,14 @@ public class Fragment_Search_RecipeCategory extends Fragment implements View.OnC
         pickle_eat.setOnClickListener(this);
         Unknown.setOnClickListener(this);
         snack_bar.setOnClickListener(this);
-
+*/
         return rootview;
 
         // return inflater.inflate(R.layout.fragment_seaech_recipe_category, containar, false);
 
     }
 
-
+/*
     @Override
     public void onClick(View v) {
         String tag;
@@ -298,9 +310,6 @@ public class Fragment_Search_RecipeCategory extends Fragment implements View.OnC
 
         }
     }
-
-
-
-
+*/
 
 }

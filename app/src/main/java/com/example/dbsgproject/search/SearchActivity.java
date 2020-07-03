@@ -12,8 +12,6 @@ import com.example.dbsgproject.R;
 
 public class SearchActivity extends AppCompatActivity {
 
-    private FragmentManager fragmentManager;
-    private FragmentTransaction transaction;
     private Fragment_Search_RecipeCategory fragment_search_recipeCategory;
     private Fragment_Search_RecipeList fragment_search_recipeList;
 
@@ -23,13 +21,13 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        fragment_search_recipeCategory = new Fragment_Search_RecipeCategory();
-        fragment_search_recipeList = new Fragment_Search_RecipeList();
-        changeFragment(0);
-
         //액션바 안보이게
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        fragment_search_recipeCategory = new Fragment_Search_RecipeCategory();
+        fragment_search_recipeList = new Fragment_Search_RecipeList();
+        changeFragment(0);
 
 /*
         fragmentManager = getSupportFragmentManager();
