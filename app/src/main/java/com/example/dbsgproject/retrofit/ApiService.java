@@ -5,19 +5,19 @@ import com.google.gson.JsonObject;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface ApiService {
-    @GET("test")
-    Call<JsonArray> localTest();
 
     @GET("menu/list")
     Call<JsonArray> getretrofitdata();
 
+    @GET("menu/search/{search}")
+    Call<JsonObject> getSearch(@Path("search") String Search);
+
+
     @GET("menu/list")
     Call<JsonObject> getList();
 
-
-    @GET("users/2")
-    Call<JsonObject> getObj();
 
 }

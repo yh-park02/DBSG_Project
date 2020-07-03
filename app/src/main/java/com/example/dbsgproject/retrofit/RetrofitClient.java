@@ -4,7 +4,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private String baseUrl ="http://ec2-15-165-205-186.ap-northeast-2.compute.amazonaws.com:8080/DBSG/";
+    //private String baseUrl ="http://ec2-15-165-205-186.ap-northeast-2.compute.amazonaws.com:8080/DBSG/";
+    private String baseUrl ="http://15.165.215.38:8080/";
 
     //객체생성
     Retrofit retrofit = new Retrofit.Builder()
