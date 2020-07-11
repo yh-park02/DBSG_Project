@@ -1,5 +1,6 @@
 package com.example.dbsgproject.recipe;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,10 @@ public class Main_recipe_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_recipe_);
 
+        //액션바 안보이게
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         TV_food_title = findViewById(R.id.textView);
         TV_food_material = findViewById(R.id.textView5);
         TV_totalTime= findViewById(R.id.textView4);
@@ -25,7 +30,11 @@ public class Main_recipe_Activity extends AppCompatActivity {
         Intent getintent = getIntent();
         System.out.println(getintent.getStringExtra("food_title_String")
                 +getintent.getStringExtra("food_material_String")
-                +getintent.getStringExtra("menu_totalTime_String"));
+                +getintent.getStringExtra("menu_totalTime_String")
+                +"// 메뉴 넘버 : "
+                +getintent.getStringExtra("menu_no")
+
+        );
 
         TV_food_title.setText(getintent.getStringExtra("food_title_String"));
         TV_food_material.setText(getintent.getStringExtra("food_material_String"));

@@ -9,12 +9,14 @@ import retrofit2.http.Path;
 
 public interface ApiService {
 
-    @GET("menu/list")
-    Call<JsonArray> getretrofitdata();
 
     @GET("menu/search/{search}")
     Call<JsonObject> getSearch(@Path("search") String Search);
 
+
+
+    @GET("menu/tag/{tag}")
+    Call<JsonObject> gettag(@Path("tag") String tag);
 
     @GET("menu/list")
     Call<JsonObject> getList();

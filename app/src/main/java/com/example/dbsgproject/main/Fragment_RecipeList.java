@@ -28,6 +28,7 @@ public class Fragment_RecipeList extends ListFragment {
 
     F_RecipeList_ListViewAdapter adapter ;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,12 +37,11 @@ public class Fragment_RecipeList extends ListFragment {
         adapter = new F_RecipeList_ListViewAdapter() ;
         setListAdapter(adapter) ;
 
-        //String Search = "버거";
+
 
         RetrofitClient retrofitClient = new RetrofitClient();
         Call<JsonObject> call = retrofitClient.apiService.getList();
 
-        //Call<JsonObject> call = retrofitClient.apiService.getSearch(Search);
 
 
         call.enqueue(new Callback<JsonObject>() {
@@ -50,12 +50,15 @@ public class Fragment_RecipeList extends ListFragment {
 
                 if(response.isSuccessful()){
 
+
+
                     String data = response.body().toString();
 
                     String menu_name ="0";
                     String menu_reqMaterial ="0";
                     String menu_totalTime ="0";
                     String data5 ="0";
+                    String menu_no ="0";
                     String menu_name_org ="0";
                     String menu_reqMaterial_org ="0";
                     String menu_totalTime_String ="0";
@@ -71,22 +74,18 @@ public class Fragment_RecipeList extends ListFragment {
                     for(int i=0; i < memberArray.size(); i++){
                         JsonObject object = (JsonObject) memberArray.get(i);
 
-
-
-                        System.out.println(memberArray.get(i));
-
-                        //System.out.println(object.get("menu_name").toString());
+                System.out.println(memberArray.get(i));
 
                         menu_name = object.get("menu_name").toString();
                         menu_reqMaterial = object.get("menu_reqMaterial").toString();
                         menu_totalTime = object.get("menu_totalTime").toString();
+                        menu_no = object.get("menu_no").toString();
                         menu_name_org = menu_name.substring(1, menu_name.length()-1 );
                         menu_reqMaterial_org = menu_reqMaterial.substring(1, menu_reqMaterial.length()-1 );
-                        //menu_totalTime_String = menu_totalTime.substring(1, menu_totalTime.length()-1 );
                         menu_totalTime_String = menu_totalTime;
 
                         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg2),
-                                menu_name_org, menu_reqMaterial_org,menu_totalTime);
+                                menu_name_org, menu_reqMaterial_org,menu_totalTime,menu_no);
                         System.out.println(menu_name.substring(1, menu_name.length()-1));
                         System.out.println(menu_reqMaterial.substring(1, menu_reqMaterial.length()-1 ));
                         System.out.println(menu_totalTime_String);
@@ -104,15 +103,6 @@ public class Fragment_RecipeList extends ListFragment {
             }
         });
 
-//        for(int i=0; i<30; i++) {
-//            // 첫 번째 아이템 추가.
-//            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg2),
-//                    "석쇠닭발", "닭발, 고춧가루, 청양고추, 설탕");
-//            // 두 번째 아이템 추가.
-//            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.testimg3),
-//                    "새우구이", "새우, 굵은소금, 쿠킹호일");
-//        }
-
 
 
         return super.onCreateView(inflater, container, savedInstanceState);
@@ -121,12 +111,12 @@ public class Fragment_RecipeList extends ListFragment {
     public void onListItemClick (ListView l, View v, int position, long id) {
         // get TextView's Text.
         F_RecipeList_ListViewItem item = (F_RecipeList_ListViewItem) l.getItemAtPosition(position);
-        //Toast.makeText(getActivity(), "클릭", Toast.LENGTH_SHORT).show();
 
         String food_title = item.getFood_title() ;
         String food_material = item.getFood_material() ;
         String menu_totalTime =  item.getmenu_totalTime();
-        // String menu_totalTime = data4_1;
+        String menu_no = item.getmenu_on();
+
         Drawable food_img = item.getFood_img() ;
 
         Toast.makeText(getActivity(), food_title+" : "+food_material+" : "+menu_totalTime, Toast.LENGTH_SHORT).show();
@@ -134,16 +124,16 @@ public class Fragment_RecipeList extends ListFragment {
         Intent intent = new Intent(getActivity(), Main_recipe_Activity.class);
         intent.putExtra("food_title_String",food_title);
         intent.putExtra("food_material_String",food_material);
-        //intent.putExtra("food_title_String",food_title);
         intent.putExtra("menu_totalTime_String",menu_totalTime);
+        intent.putExtra("menu_no",menu_no);
         System.out.println(menu_totalTime);
 
         startActivity(intent);
 
     }
 
-    public void addItem(Drawable icon, String title, String desc, String menu_totalTime) {
-        adapter.addItem(icon, title, desc,menu_totalTime) ;
+    public void addItem(Drawable icon, String title, String desc, String menu_totalTime,String menu_no) {
+        adapter.addItem(icon, title, desc,menu_totalTime,menu_no) ;
     }
 
 

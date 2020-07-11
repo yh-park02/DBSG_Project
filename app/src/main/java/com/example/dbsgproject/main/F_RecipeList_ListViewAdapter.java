@@ -70,13 +70,14 @@ public class F_RecipeList_ListViewAdapter extends BaseAdapter {
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(Drawable icon, String title, String desc, String menu_totalTime) {
+    public void addItem(Drawable icon, String title, String desc, String menu_totalTime,String menu_no) {
         F_RecipeList_ListViewItem item = new F_RecipeList_ListViewItem();
 
         item.setFood_img(icon);
         item.setFood_title(title);
         item.setFood_material(desc);
         item.setmenu_totalTime(menu_totalTime);
+        item.setmenu_on(menu_no);
 
         listViewItemList.add(item);
     }

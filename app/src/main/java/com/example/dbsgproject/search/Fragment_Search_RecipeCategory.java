@@ -1,6 +1,6 @@
 package com.example.dbsgproject.search;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,33 +12,54 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.dbsgproject.R;
-import com.example.dbsgproject.main_hamburger.LoginActivity;
-import com.example.dbsgproject.search.SearchActivity;
 
-public class Fragment_Search_RecipeCategory extends Fragment  {
-    //implements View.OnClickListener
+public class Fragment_Search_RecipeCategory extends Fragment implements View.OnClickListener {
+
+
+
+    //검색액티비티에 값전달용 인터페이스
+    public interface Search_Value_Listener {
+
+        void search_Value_Set(String search_Value_tag);
+
+    }
+
+    @Override
+    public void onAttach(Context context){
+        super.onAttach(context);
+        if(context instanceof Search_Value_Listener){
+            search_Value_Listener = (Search_Value_Listener) context;
+        }else{
+            throw new RuntimeException(context.toString());
+        }
+    }
+    @Override
+    public void onDetach(){
+        super.onDetach();
+        search_Value_Listener = null;
+    }
+    private Search_Value_Listener search_Value_Listener;
+
+
+
+    //태그값을 받으면 태그값을 검색액티비티로 넘기면서 리스트 프래그먼트로 화면전환 메소드
+    public void tag_call(String tag){
+        SearchActivity searchActivity = (SearchActivity)getActivity();
+        search_Value_Listener.search_Value_Set(tag);
+        searchActivity.changeFragment(1);
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup containar,
                              @Nullable Bundle savedInstanceStanceState) {
 
-        String tag = "1";
+
 
         View rootview = inflater.inflate(R.layout.fragment_seaech_recipe_category, containar, false);
 
 
-
         Button oevn = (Button) rootview.findViewById(R.id.btn1);
-        oevn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                SearchActivity searchActivity = (SearchActivity)getActivity();
-                searchActivity.changeFragment(1);
-            }
-        });
-
-/*
         Button airfryer = (Button) rootview.findViewById(R.id.btn2);
         Button fire = (Button) rootview.findViewById(R.id.btn3);
         Button microwave = (Button) rootview.findViewById(R.id.btn4);
@@ -126,190 +147,231 @@ public class Fragment_Search_RecipeCategory extends Fragment  {
         pickle_eat.setOnClickListener(this);
         Unknown.setOnClickListener(this);
         snack_bar.setOnClickListener(this);
-*/
+
         return rootview;
 
-        // return inflater.inflate(R.layout.fragment_seaech_recipe_category, containar, false);
 
     }
 
-/*
-    @Override
+
+
+//클릭시 태그 정보값 전달
     public void onClick(View v) {
         String tag;
+        String Search_Value;
 
         switch (v.getId()) {
             case R.id.btn1:
                 tag = "1";
+                tag_call(tag);
 
                 break;
             case R.id.btn2:
                 tag = "2";
-
+                tag_call(tag);
                 break;
             case R.id.btn3:
                 tag = "3";
+                tag_call(tag);
 
                 break;
             case R.id.btn4:
                 tag = "4";
+                tag_call(tag);
 
                 break;
             case R.id.btn5:
                 tag = "5";
+                tag_call(tag);
 
                 break;
             case R.id.btn6:
                 tag = "6";
+                tag_call(tag);
 
                 break;
             case R.id.btn7:
                 tag = "7";
+                tag_call(tag);
 
                 break;
             case R.id.btn8:
                 tag = "8";
+                tag_call(tag);
 
                 break;
             case R.id.btn9:
                 tag = "9";
+                tag_call(tag);
 
                 break;
             case R.id.btn10:
                 tag = "10";
+                tag_call(tag);
 
                 break;
             case R.id.btn11:
                 tag = "11";
+                tag_call(tag);
 
                 break;
             case R.id.btn12:
                 tag = "12";
+                tag_call(tag);
 
                 break;
             case R.id.btn13:
                 tag = "13";
+                tag_call(tag);
 
                 break;
             case R.id.btn14:
                 tag = "14";
+                tag_call(tag);
 
                 break;
             case R.id.btn15:
                 tag = "15";
+                tag_call(tag);
 
                 break;
             case R.id.btn16:
                 tag = "16";
+                tag_call(tag);
 
                 break;
             case R.id.btn17:
                 tag = "17";
+                tag_call(tag);
 
                 break;
             case R.id.btn18:
                 tag = "18";
+                tag_call(tag);
 
                 break;
             case R.id.btn19:
                 tag = "19";
+                tag_call(tag);
 
                 break;
             case R.id.btn20:
                 tag = "20";
+                tag_call(tag);
 
                 break;
             case R.id.btn21:
                 tag = "21";
+                tag_call(tag);
 
                 break;
             case R.id.btn22:
                 tag = "22";
+                tag_call(tag);
 
                 break;
             case R.id.btn23:
                 tag = "23";
+                tag_call(tag);
 
                 break;
             case R.id.btn24:
                 tag = "24";
+                tag_call(tag);
 
                 break;
             case R.id.btn25:
                 tag = "25";
+                tag_call(tag);
 
                 break;
             case R.id.btn26:
                 tag = "26";
+                tag_call(tag);
 
                 break;
             case R.id.btn27:
                 tag = "27";
+                tag_call(tag);
 
                 break;
             case R.id.btn28:
                 tag = "28";
+                tag_call(tag);
 
                 break;
             case R.id.btn29:
                 tag = "29";
+                tag_call(tag);
 
                 break;
             case R.id.btn30:
                 tag = "30";
+                tag_call(tag);
 
                 break;
             case R.id.btn31:
                 tag = "31";
+                tag_call(tag);
 
                 break;
             case R.id.btn32:
                 tag = "32";
+                tag_call(tag);
 
                 break;
             case R.id.btn33:
                 tag = "33";
+                tag_call(tag);
 
                 break;
             case R.id.btn34:
                 tag = "34";
+                tag_call(tag);
 
                 break;
             case R.id.btn35:
                 tag = "35";
+                tag_call(tag);
 
                 break;
             case R.id.btn36:
                 tag = "36";
+                tag_call(tag);
 
                 break;
             case R.id.btn37:
                 tag = "37";
+                tag_call(tag);
 
                 break;
             case R.id.btn38:
                 tag = "38";
+                tag_call(tag);
 
                 break;
             case R.id.btn39:
                 tag = "39";
+                tag_call(tag);
 
                 break;
             case R.id.btn40:
                 tag = "40";
+                tag_call(tag);
 
                 break;
             case R.id.btn41:
                 tag = "41";
+                tag_call(tag);
 
                 break;
             case R.id.btn42:
                 tag = "42";
-
+                tag_call(tag);
                 break;
 
         }
     }
-*/
+
 
 }

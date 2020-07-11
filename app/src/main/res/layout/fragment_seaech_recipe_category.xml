@@ -59,7 +59,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="떠 먹을 3끼"
                     android:textSize="10sp" />
 
@@ -70,7 +69,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="뽁아먹는 3끼"
                     android:textSize="10sp" />
 
@@ -81,7 +79,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="밥이랑 먹는 3끼"
                     android:textSize="10sp" />
 
@@ -100,7 +97,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="날로 먹는 3끼"
                     android:textSize="10sp" />
 
@@ -111,7 +107,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="익혀 먹는 3끼"
                     android:textSize="10sp" />
 
@@ -122,7 +117,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="무'쳐'먹는 3끼"
                     android:textSize="10sp" />
 
@@ -133,7 +127,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="찍어먹는 3끼"
                     android:textSize="10sp" />
 
@@ -150,7 +143,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="달다구리 3끼"
                     android:textSize="10sp" />
 
@@ -161,7 +153,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="마시는 3끼"
                     android:textSize="10sp" />
 
@@ -216,7 +207,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="술친구 3끼"
                     android:textSize="10sp" />
 
@@ -227,7 +217,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="어서오 3끼"
                     android:textSize="10sp" />
 
@@ -238,7 +227,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="손수 싸온 3끼"
                     android:textSize="10sp" />
 
@@ -249,7 +237,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="속 풀릴 3끼"
                     android:textSize="10sp" />
             </TableRow>
@@ -267,7 +254,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="자취 3끼"
                     android:textSize="10sp" />
 
@@ -278,7 +264,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="명절 3끼"
                     android:textSize="10sp" />
 
@@ -289,7 +274,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="내 3끼\n(데이트/이벤트)"
                     android:textSize="10sp" />
 
@@ -300,7 +284,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="빨리 먹는 3끼"
                     android:textSize="10sp" />
 
@@ -317,7 +300,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="주워 먹는 3끼"
                     android:textSize="10sp" />
 
@@ -328,7 +310,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="분식 3끼"
                     android:textSize="10sp" />
 
@@ -339,7 +320,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="모르는 3끼"
                     android:textSize="10sp" />
 
@@ -350,7 +330,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="오래해먹을3끼"
                     android:textSize="10sp"
                     android:visibility="visible" />
@@ -386,7 +365,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/icon_oven"
-                    android:onClick="onClick"
                     android:text="@string/oven"
                     android:textSize="10sp" />
 
@@ -397,7 +375,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/icon_airfryer"
-                    android:onClick="onClick"
                     android:text="@string/air"
                     android:textSize="10sp" />
 
@@ -408,7 +385,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/icon_microwave"
-                    android:onClick="onClick"
                     android:text="@string/microwave"
                     android:textSize="10sp" />
 
@@ -419,7 +395,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/icon_fire"
-                    android:onClick="onClick"
                     android:text="@string/fire"
                     android:textSize="10sp" />
 
@@ -454,7 +429,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="봄같은 3끼"
                     android:textSize="10sp" />
 
@@ -465,7 +439,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="여름적인 3끼"
                     android:textSize="10sp" />
 
@@ -476,7 +449,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="가을스런 3끼"
                     android:textSize="10sp" />
 
@@ -487,7 +459,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="겨울 나는 3끼"
                     android:textSize="10sp" />
 
@@ -522,7 +493,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="우리나라 3끼"
                     android:textSize="10sp" />
 
@@ -533,7 +503,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="중국 3끼"
                     android:textSize="10sp" />
 
@@ -544,7 +513,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="일본 3끼"
                     android:textSize="10sp" />
 
@@ -555,7 +523,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="양식 3끼"
                     android:textSize="10sp" />
 
@@ -574,7 +541,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="아시아 3끼"
                     android:textSize="10sp" />
 
@@ -638,7 +604,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="살이 빠질 3끼"
                     android:textSize="10sp" />
 
@@ -649,7 +614,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="피부가 좋아질 3끼"
                     android:textSize="10sp" />
 
@@ -660,7 +624,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="독소가 빠질 3끼"
                     android:textSize="10sp" />
 
@@ -671,7 +634,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="근소실을 막아줄 3끼"
                     android:textSize="10sp" />
             </TableRow>
@@ -689,7 +651,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="자양강장제 같은 3끼"
                     android:textSize="10sp" />
 
@@ -753,7 +714,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="우리 아기를 위한 3끼"
                     android:textSize="10sp" />
 
@@ -764,7 +724,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_tag"
                     android:drawableTop="@drawable/crown"
-                    android:onClick="onClick"
                     android:text="엄마를 위한 3끼"
                     android:textSize="10sp" />
 
