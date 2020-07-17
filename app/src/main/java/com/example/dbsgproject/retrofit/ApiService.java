@@ -13,6 +13,8 @@ public interface ApiService {
     @GET("menu/search/{search}")
     Call<JsonObject> getSearch(@Path("search") String Search);
 
+    @GET("recipe/{menu_no}")
+    Call<JsonObject> getmenu_no(@Path("menu_no") String menu_no);
 
 
     @GET("menu/tag/{tag}")

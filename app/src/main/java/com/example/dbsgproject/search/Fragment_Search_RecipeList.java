@@ -7,22 +7,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
 import com.example.dbsgproject.main.F_RecipeList_ListViewAdapter;
 import com.example.dbsgproject.main.F_RecipeList_ListViewItem;
-import com.example.dbsgproject.recipe.CookingActivity;
 import com.example.dbsgproject.R;
 import com.example.dbsgproject.recipe.Main_recipe_Activity;
-import com.example.dbsgproject.recipe.Recipe_Detail_Activity;
 import com.example.dbsgproject.retrofit.RetrofitClient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -43,18 +39,8 @@ public class Fragment_Search_RecipeList extends ListFragment {
     public View onCreateView(@NonNull LayoutInflater inflater,  @Nullable ViewGroup containar,
                              @Nullable Bundle savedInstanceStanceState){
 
-        System.out.println("tag_test ====================================");
-        if(getArguments().getString("tag_num2") != null){
-            String tag = getArguments().getString("tag_num2");
-            System.out.println(tag);
-            // 전달된 key 값
 
-
-        }
-
-
-
-        View rootview = inflater.inflate(R.layout.fragment_search_recipe_list, containar, false);
+       //View rootview = inflater.inflate(R.layout.fragment_search_recipe_list, containar, false);
 
 
         // Adapter 생성 및 Adapter 지정.
@@ -68,10 +54,16 @@ public class Fragment_Search_RecipeList extends ListFragment {
 
             if(getArguments().getString("tag_num2") != null){
 
+                //태그 검색 통신
                 String tag = getArguments().getString("tag_num2");
                 call = retrofitClient.apiService.gettag(tag);
-            }else if (getArguments().getString("tag_num2") == null){
-                call = retrofitClient.apiService.getList();
+
+
+                //상세 검색 통신
+            }else if (getArguments().getString("search_Value") != null){
+                call = retrofitClient.apiService.getSearch(getArguments().getString("search_Value"));
+
+
             }
 
 
@@ -173,5 +165,7 @@ public class Fragment_Search_RecipeList extends ListFragment {
     public void addItem(Drawable icon, String title, String desc, String menu_totalTime,String menu_no) {
         adapter.addItem(icon, title, desc,menu_totalTime,menu_no) ;
     }
+
+
 
 }
