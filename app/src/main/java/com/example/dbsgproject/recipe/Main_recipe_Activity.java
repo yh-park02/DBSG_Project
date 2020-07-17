@@ -69,10 +69,7 @@ public class Main_recipe_Activity extends AppCompatActivity {
         );
 
 
-
-
-
-
+        //서버 오류 로 메뉴넘버로 받아오는 json 값 강제 기입 버전용
         String data = "{\"con\":\"success\",\"data\":{\"menuInfo\":{\"menu_no\":7,\"menu_name\":\"마늘 한 숟갈 라면\",\"menu_image\":\"\",\"menu_description\":\"한국라면에 한국 더하기\",\"menu_reqMaterial\":\"김치, 마늘\",\"menu_needlessMaterial\":\"오향장육,\",\"menu_star\":0.0,\"menu_tag\":\"4,5,6,7,10,21,30,41\",\"menu_totalTime\":600,\"menu_writer\":\"admin\",\"menu_preferCnt\":1,\"menu_readCnt\":3},\"recipe\":[{\"recipe_no\":3,\"menu_no\":7,\"recipe_processNo\":1,\"recipe_action\":\"라면 뜯기\",\"recipe_fire\":1,\"recipe_reqTime\":10,\"recipe_image\":\"\"},{\"recipe_no\":4,\"menu_no\":7,\"recipe_processNo\":2,\"recipe_action\":\"물 끓이기\",\"recipe_fire\":5,\"recipe_reqTime\":120,\"recipe_image\":\"\"},{\"recipe_no\":5,\"menu_no\":7,\"recipe_processNo\":3,\"recipe_action\":\"스프 면, 넣구 끓이기\",\"recipe_fire\":5,\"recipe_reqTime\":120,\"recipe_image\":\"\"},{\"recipe_no\":6,\"menu_no\":7,\"recipe_processNo\":4,\"recipe_action\":\"다 끓이고, 마지막에 마늘 한 숟갈 첨가\",\"recipe_fire\":1,\"recipe_reqTime\":10,\"recipe_image\":\"\"}]},\"size\":4,\"recipe\":\"success\",\"keyword\":7}";
 
         JsonParser Parser = new JsonParser();
@@ -97,7 +94,7 @@ public class Main_recipe_Activity extends AppCompatActivity {
             System.out.println(menu_name);
 
         }
-
+//서버 오류 로 메뉴넘버로 받아오는 json 값 강제 기입 버전용 -끝
 
 
 //        RetrofitClient retrofitClient = new RetrofitClient();
